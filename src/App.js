@@ -1,13 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import dayjs from 'dayjs';
+import CountdownTimer from './Components/CountdownTimer/CountdownTimer'
+
+
 
 function App() {
+
+    const deadline = dayjs('2021-11-20').valueOf();
+
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-            </header>
-            <h3>[this space for rent]</h3>
+            <CountdownTimer
+                countdownEnd={deadline}
+            />
         </div>
     );
 }
