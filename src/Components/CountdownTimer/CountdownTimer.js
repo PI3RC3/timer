@@ -31,14 +31,14 @@ const CountdownTimer = ({ countdownEnd }) => {
 
     return (
         <div className="countdown-timer">
-            <span>{remainingTime.days}</span>
-            <span>Days</span>
-            <span>{remainingTime.hours}</span>
-            <span>Hours</span>
-            <span>{remainingTime.minutes}</span>
-            <span>Minutes</span>
-            <span>{remainingTime.seconds}</span>
-            <span>Seconds</span>
+            <span><b>{remainingTime.days}</b></span>
+            <span>days</span>
+            <span><b>{remainingTime.hours}</b></span>
+            <span>hours</span>
+            <span><b>{remainingTime.minutes}</b></span>
+            <span>minutes</span>
+            <span><b>{remainingTime.seconds}</b></span>
+            <span>seconds</span>
         </div>
     );
 }
