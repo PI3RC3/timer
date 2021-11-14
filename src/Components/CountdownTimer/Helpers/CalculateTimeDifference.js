@@ -40,5 +40,5 @@ function getRemainingHours(nowDayjs, timestampDayjs) {
 
 function getRemainingDays(nowDayjs, timestampDayjs) {
     const days = timestampDayjs.diff(nowDayjs, 'days');
-    return days;
+    return zeroPadInteger(days, 2);
 }

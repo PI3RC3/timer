@@ -1,25 +1,24 @@
 .countdown-timer {
     width: 90vw;
     height: 10vw;
-    border: 2px solid royalblue;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border: 2px solid red;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-size: 2vw;
     display: flex;
     margin-top: 2vw;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
     .countdown-timer span {
-        margin-left: 0.5vw;
-        margin-right: 0.5vw;
+        margin-left: 2px;
+        margin-right: 1px;
     }
 
 .numbers {
     width: 2ch;
     font-size: 3vw;
     font-weight: bold;
-    color: royalblue;
+    position:relative;
+    bottom: -5vw;
 }
