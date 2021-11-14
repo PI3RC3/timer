@@ -60,10 +60,10 @@ const CountdownTimer = ({ countdownEnd }) => {
         return (
             <div className="countdown-timer"
             onClick={ChangeFormat}>
-                <span className="numbers">{remainingTime.days}:</span>
-                <span className="numbers">{remainingTime.hours}:</span>
-                <span className="numbers">{remainingTime.minutes}:</span>
-                <span className="numbers">{remainingTime.seconds}</span>
+                <span className="compactFormat">{remainingTime.days}:</span>
+                <span className="compactFormat">{remainingTime.hours}:</span>
+                <span className="compactFormat">{remainingTime.minutes}:</span>
+                <span className="compactFormat">{remainingTime.seconds}</span>
             </div>
         );
     }
