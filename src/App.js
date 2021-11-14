@@ -7,12 +7,11 @@ function App() {
 
     return (
         <div className="App">
-
             <CountdownTimer
                 countdownEnd={deadline}
             />
-
         </div>
+
     );
 }
 
