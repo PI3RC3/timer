@@ -4,9 +4,8 @@
     "\\public",
     "\\src",
     "\\src\\Components",
-    "\\src\\Components\\CountdownTimer",
     "\\src\\Components\\CountdownTimer\\Helpers"
   ],
-  "SelectedNode": "\\src\\Components\\CountdownTimer\\Helpers\\CalculateTimeDifference.js",
+  "SelectedNode": "\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }

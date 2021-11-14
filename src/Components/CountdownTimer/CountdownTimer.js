@@ -20,7 +20,6 @@ const CountdownTimer = ({ countdownEnd }) => {
             }, 1000);
 
             return () => clearInterval(intervalID);
-
         },
         [countdownEnd]
     )
@@ -35,10 +34,7 @@ const CountdownTimer = ({ countdownEnd }) => {
         }
         else {
             setFormatType("extended");
-
         }
-
-        console.log("Current Format Type: " + formatType);
     }
 
     if (formatType === "extended") {
