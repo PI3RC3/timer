@@ -11,6 +11,7 @@ const defaultRemainingTime = {
 
 const CountdownTimer = ({ countdownEnd }) => {
     const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
+    const [formatType, setFormatType] = useState("extended");
 
     useEffect(
         () => {
@@ -25,22 +26,47 @@ const CountdownTimer = ({ countdownEnd }) => {
     )
 
     function updateRemainingTime(countdown) {
-        //console.log("updateRemainingTime called...");
         setRemainingTime(getRemaininttimeUntilMSTimestam(countdown));
     }
 
-    return (
-        <div className="countdown-timer">
-            <span><b>{remainingTime.days}</b></span>
-            <span>days</span>
-            <span><b>{remainingTime.hours}</b></span>
-            <span>hours</span>
-            <span><b>{remainingTime.minutes}</b></span>
-            <span>minutes</span>
-            <span><b>{remainingTime.seconds}</b></span>
-            <span>seconds</span>
-        </div>
-    );
+    function ChangeFormat() {
+        if (formatType === "extended") {
+            setFormatType("compact");
+        }
+        else {
+            setFormatType("extended");
+
+        }
+
+        console.log("Current Format Type: " + formatType);
+    }
+
+    if (formatType === "extended") {
+        return (
+            <div className="countdown-timer"
+            onClick={ChangeFormat}>
+                <div><span className="numbers">{remainingTime.days}</span>
+                    <span>DAYS</span></div>
+                <div><span className="numbers">{remainingTime.hours}</span>
+                    <span>HOURS</span></div>
+                <div><span className="numbers">{remainingTime.minutes}</span>
+                    <span>MINUTES</span></div>
+                <div><span className="numbers">{remainingTime.seconds}</span>
+                    <span>SECONDS</span></div>
+            </div>
+        );
+    }
+    else {
+        return (
+            <div className="countdown-timer"
+            onClick={ChangeFormat}>
+                <span className="numbers">{remainingTime.days}:</span>
+                <span className="numbers">{remainingTime.hours}:</span>
+                <span className="numbers">{remainingTime.minutes}:</span>
+                <span className="numbers">{remainingTime.seconds}</span>
+            </div>
+        );
+    }
 }
 
 export default CountdownTimer;
